@@ -1,0 +1,18 @@
+<app-toolbar></app-toolbar>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <label for="title">Título de la tarea:</label>
+  <input type="text" id="title" formControlName="title" required>
+
+  <label for="priority">Prioridad:</label>
+  <select id="priority" formControlName="priority">
+    <option value="ALTA">ALTA</option>
+    <option value="MEDIA">MEDIA</option>
+    <option value="BAJA">BAJA</option>
+  </select>
+
+  <label for="description">Descripción:</label>
+  <textarea id="description" formControlName="description"></textarea>
+
+
+  <button type="submit">AGREGAR</button>
+</form>

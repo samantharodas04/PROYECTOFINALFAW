@@ -1,0 +1,105 @@
+/* task-list.component.scss */
+
+.task-list {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f5f5f5;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+  }
+
+  button:hover {
+    text-decoration: none;
+  }
+
+  input,
+  select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* Estilos para los círculos de prioridad */
+  .priority-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  // Colores según la prioridad
+  .priority-box.ALTA {
+    background-color: #FF0000; // Rojo para alta
+  }
+
+  .priority-box.MEDIA {
+    background-color: #d9ff00d4; // Naranja para media
+  }
+
+  .priority-box.BAJA {
+    background-color: #008000; // Verde para baja
+  }
+}
+input[type="text"] {
+  margin: 10px 0 10px 10px; // Margen a la izquierda
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+// Estilos para el botón "A - Z"
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+// Estilos para el select (prioridad)
+select {
+  margin: 5px 0 5px 10px; // Margen a la izquierda
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  background-color: #f9f9f9; // Color de fondo
+  color: #333; // Color del texto
+}

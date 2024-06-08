@@ -1,0 +1,44 @@
+<app-toolbar></app-toolbar>
+
+<label for="buscar" style="margin-left: 10px;">Buscar:</label>
+<input type="text"  placeholder="Buscar" style="margin: 5px;" (change)="onFilterChange($event)" >
+
+<button style="margin: 5px;" (click)="onOrderClick()"> A - Z</button>
+
+<label for="priority">Prioridad:</label>
+<select id="priority" style="margin: 5px;" (change)="onFilterSelect($event)">
+  <option value="ALTA">ALTA</option>
+  <option value="MEDIA">MEDIA</option>
+  <option value="BAJA">BAJA</option>
+  <option value="TODAS">TODAS</option>
+</select>
+
+<div class="task-list">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>User</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td> <button (click)="onButtonClick(task.id)">{{ task.title }}</button></td>
+        <td>
+          <div class="priority-container">
+            <div class="priority-box" [style.background-color]="getPriorityColor(task.priority)"></div>
+            <span>{{ task.priority }}</span>
+          </div>
+        </td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.date }}</td>
+        <td>{{ task.usuario }}</td>
+        <td>{{ task.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

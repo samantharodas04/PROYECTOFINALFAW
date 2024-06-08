@@ -1,0 +1,15 @@
+<div class="login-card">
+
+    <div class="card-title">
+        <h1 align ="center">Login</h1>
+
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input name="email" type="email" formControlName="email" placeholder="Email">
+        <input type="password" formControlName="password" placeholder="Password">
+        <button>Submit</button>
+        <p> </p>
+        <span align ="center">You don't have an account? <a routerLink="/register">Sign up</a></span>
+    </form>
+
+</div>
